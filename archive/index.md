@@ -24,6 +24,7 @@ adallow: 0
   {% endunless %}
   {%if post.o_link %}
  <li class="arch-list">o_link:<a href="{{site.baseurl}}{{ post.o_link }}">{{ post.title }}</a>&nbsp;<time>{{ post.date | date:"%d %b" }}</time></li>
+  {% endif %}
  <li class="arch-list"><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>&nbsp;<time>{{ post.date | date:"%d %b" }}</time></li>
 {% endfor %}
   </ul>
