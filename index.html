@@ -19,15 +19,12 @@ layout: default
   
   {% for category in site.categories %}
 <h1 class="page-heading">{{ category | first }}</h1>
-<!-- <h2>{{ category | first }}</h2> -->
-<!-- </span>{{ category | last | size }}</span> -->
 <ul class="post-list">
     {% for post in category.last %}
-        <!-- <li ><h2><small class="post-meta">{{post.date | date:"%d/%m/%Y"}}</small><a href="{{ post.url | prepend: site.baseurl }}"  class="post-link">{{ post.title }}</a></h2></li> -->
      <li>
   {%if post.o_link %}
  <li class="arch-list"><a href="{{ post.o_link }}" target="_blank">{{ post.title }}</a>&nbsp;<time>{{ post.date | date:"%d %b" }}</time></li>
-  {%else%}
+  {% else %}
  <li class="arch-list"><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>&nbsp;<time>{{ post.date | date:"%d %b" }}</time></li>      
       </li>
 	{% endfor %}
