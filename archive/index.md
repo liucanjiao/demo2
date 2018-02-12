@@ -23,9 +23,10 @@ adallow: 0
   {% endif %}
   {% endunless %}
   {%if post.o_link %}
- <li class="arch-list">o_link:<a href="{{site.baseurl}}{{ post.o_link }}">{{ post.title }}</a>&nbsp;<time>{{ post.date | date:"%d %b" }}</time></li>
-  {% endif %}
+ <li class="arch-list"><a href="{{ post.o_link }}" target="_blank">{{ post.title }}</a>&nbsp;<time>{{ post.date | date:"%d %b" }}</time></li>
+  {%else%}
  <li class="arch-list"><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>&nbsp;<time>{{ post.date | date:"%d %b" }}</time></li>
+ {% endif %}
 {% endfor %}
   </ul>
 </section>
