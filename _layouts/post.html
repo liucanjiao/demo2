@@ -38,7 +38,7 @@ table {
 
 
 </article>
-{% include share.html %}
+ {% if site.share %}{% include share.html %}{% endif %}
 {% if site.disqus-shortname %}{% include disqus.html %}{% endif %}
 </div>
  <!-- Disqus -->
