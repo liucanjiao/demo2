@@ -13,7 +13,7 @@ layout: default
  <li class="arch-list"><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>&nbsp;<time>{{ post.date | date:"%d %b" }}</time></li>  
 	{% endif %}
  <li>
- {% include post_struct.html small=post.excerpt full=post.centent%}
+ {% include post_struct.html  full=post.centent small=post.excerpt %}
 <!--  {{ post.excerpt | remove: '<p>' | remove: '</p>' }} -->
 <!-- excerpt_separator:  -->
 <!-- excerpt_separator:  -->
