@@ -1,23 +1,21 @@
 <meta charset="utf-8">
 <script>
-function change()
+function change(id)
 {
-var disp_full=document.getElementById("fullContent").style.display
-var disp_sm=document.getElementById("smallContent").style.display
-if(disp_sm=='none')
-{
-alert("You clicked on a " + disp_sm+ " element.")
-disp_sm=''
-disp_full='none'
-}
-else
-{
-alert("You clicked on a " + disp_full+ " element.")
-disp_sm='none'
-disp_full=''
 
-}
+    var disp=id.parentNode.parentNode;
+    var disp_full = disp.getElementsByTagName("DIV")[1];
+    var disp_small = disp.getElementsByTagName("DIV")[0];
 
+    if(disp_full.style.display=='none')
+    {
+        disp_small.style.display="none"
+        disp_full.style.display=""
+    }
+    else{
+        disp_small.style.display=""
+        disp_full.style.display="none"
+    }
 }
 </script>
 
@@ -25,11 +23,9 @@ disp_full=''
 <div id="all">
 <div id="smallContent" style="display:block">{{ include.small }}
 <br>
-[<a href="#" onclick="change()">详细</a>]</div>
+[<a href="#" onclick="change(this)">详细</a>]</div>
 <div id="fullContent" style="display:none">{{include.full}}
 <br>
-[<a href="#" onclick="change()" >收起</a>]</div>
-</div id="all">
-
-
+[<a href="#" onclick="change(this)" >收起</a>]</div>
+</div >
 
