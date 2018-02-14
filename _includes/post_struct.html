@@ -1,0 +1,8 @@
+<div id="all">
+<div id="smallContent" style="display:block">{{ include.small }}
+<br>
+[<a href="javascript:" onclick="document.all.fullContent.style.display=(document.all.fullContent.style.display=='none')?'':'none';document.all.smallContent.style.display=(document.all.smallContent.style.display=='none')?'':'none'">详细</a>]</div>
+<div id="fullContent" style="display:none">{{include.full}}
+<br>
+[<a href="javascript:" onclick="document.all.fullContent.style.display=(document.all.fullContent.style.display=='none')?'':'none';document.all.smallContent.style.display=(document.all.smallContent.style.display=='none')?'':'none'" >收起</a>]</div>
+</div id="all">

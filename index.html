@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<h1>update1.3</h1>
+<h1>Giu is unique.</h1>
   {% for category in site.categories %}
   {% if category.first == "人物报道" %}
 <h2 class="page-heading">{{ category | first }}</h2>
@@ -13,7 +13,8 @@ layout: default
  <li class="arch-list"><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>&nbsp;<time>{{ post.date | date:"%d %b" }}</time></li>  
 	{% endif %}
  <li>
- {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
+ {% include post_struct.html small=post.excerpt full=post.centent%}
+<!--  {{ post.excerpt | remove: '<p>' | remove: '</p>' }} -->
  </li>
 	{% endfor %}
 	{% endif %}
