@@ -16,7 +16,7 @@ layout: default
 <article>
  {{post.centent}}
  </article>
- {% include post_struct.html  full={{post.centent}} small={{post.excerpt}} %}
+ {% include post_struct.html  full=post.centent small=post.excerpt %}
 <!--  {{ post.excerpt | remove: '<p>' | remove: '</p>' }} -->
 <!-- excerpt_separator:  -->
 <!-- excerpt_separator:  -->
