@@ -1,8 +1,35 @@
+<meta charset="utf-8">
+<script>
+function change()
+{
+var disp_full=document.getElementById("fullContent").style.display
+var disp_sm=document.getElementById("smallContent").style.display
+if(disp_sm=='none')
+{
+alert("You clicked on a " + disp_sm+ " element.")
+disp_sm=''
+disp_full='none'
+}
+else
+{
+alert("You clicked on a " + disp_full+ " element.")
+disp_sm='none'
+disp_full=''
+
+}
+
+}
+</script>
+
+
 <div id="all">
 <div id="smallContent" style="display:block">{{ include.small }}
 <br>
-[<a href="javascript:" onclick="document.all.fullContent.style.display=(document.all.fullContent.style.display=='none')?'':'none';document.all.smallContent.style.display=(document.all.smallContent.style.display=='none')?'':'none'">详细</a>]</div>
+[<a href="#" onclick="change()">详细</a>]</div>
 <div id="fullContent" style="display:none">{{include.full}}
 <br>
-[<a href="javascript:" onclick="document.all.fullContent.style.display=(document.all.fullContent.style.display=='none')?'':'none';document.all.smallContent.style.display=(document.all.smallContent.style.display=='none')?'':'none'" >收起</a>]</div>
+[<a href="#" onclick="change()" >收起</a>]</div>
 </div id="all">
+
+
+
