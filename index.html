@@ -3,7 +3,6 @@ layout: default
 ---
 <h1>Giu is unique.</h1>
   {% for category in site.categories %}
-  {% if category.first == "人物报道" %}
 <h2 class="page-heading">{{ category | first }}</h2>
 <ul class="past">
     {% for post in category.last %}
@@ -11,18 +10,8 @@ layout: default
  <li class="arch-list"><a href="{{ post.o_link }}" target="_blank">{{ post.title }}</a>&nbsp;<time>{{ post.date | date:"%d %b" }}</time></li>
   {% else %}
  <li class="arch-list"><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>&nbsp;<time>{{ post.date | date:"%d %b" }}</time></li>  
-	{% endif %}
- <li>
-  <!-- <div class="content"> -->
-    <!-- {{ post.content }} -->
-  <!-- </div> -->
- {% include post_struct.html  full=post.content small=post.excerpt %}
-<!--  {{ post.excerpt | remove: '<p>' | remove: '</p>' }} -->
-<!-- excerpt_separator:  -->
-<!-- excerpt_separator:  -->
-<!--more-->
- </li>
+{% endif %}
 	{% endfor %}
-	{% endif %}
+	
 </ul>
 {% endfor %}
